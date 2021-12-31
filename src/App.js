@@ -1,9 +1,12 @@
-import './App.css';
+import React from "react";
+import './Style.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import ListTask from './components/ListTask';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      
+    <div className="container--list">
+        <ListTask />
     </div>
   );
 }

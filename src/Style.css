@@ -1,0 +1,98 @@
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container--list {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 350px;
+    border: 3px solid green;
+}
+
+.add--task {
+    height: 30%;
+    margin-left: 5px;
+    background-color: rgb(243, 238, 235);
+}
+
+.bg-color {
+    color: rgb(47, 5, 145);
+}
+
+.add--task h1 {
+    margin-left: 1rem;
+    color: rgb(47, 5, 145);
+}
+
+.adding--box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adding--box input {
+    border: none;
+    height: 30px;
+    width: 220px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.add--task i {
+    cursor: pointer;
+}
+
+.task--list {
+    border: 3px solid blue;
+    height: 70%;
+    font-weight: bold;
+    color: rgb(47, 5, 145);
+    background-color: rgb(0, 247, 255);
+}
+
+.todo {
+    border: 2px solid red;
+    height: 50px;
+    display: flex;
+    padding-left: 1rem;
+}
+
+.task--title {
+    height: 30px;
+    margin: auto 0;
+    width: 70%;
+}
+
+.task--postponing {
+    margin: auto 0;
+    margin-left: 2rem;
+    width: 10%;
+}
+
+.task--deleting {
+    background-color: rgb(47, 5, 145);
+    color: #fff;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task--checking {
+    margin: auto 0;
+    width: 10%;
+    margin-right: .2rem;
+}
+
+.task--deleting i {
+    cursor: pointer;
+    margin: auto 0;
+}
+
+button {
+    border: none;
+}
