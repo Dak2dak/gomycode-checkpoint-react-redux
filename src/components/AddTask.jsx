@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 const AddTask = () => {
 
-    const [value, setValue] = useState();
+    const [value, setValue] = useState("");
 
     const sendOut = useDispatch(); 
 
@@ -13,20 +13,25 @@ const AddTask = () => {
         e.preventDefault();
         sendOut(
             addtask({
-                title: value,
+                description: value
             })
-        )
+        );
     }
 
     return (
         <div className='add--task'>
             
-            <h1>Your personal todo-list</h1>
+            <h1>
+                <span>Your personal</span>
+                <br />
+                <span>todo-list</span>  
+            </h1>
 
-            <form className="adding--box" onSubmit={handleSubmit} >
+            <form className="adding--box" onSubmit={handleSubmit}>
                     
                 <input 
-                    type="text" placeholder="Add task here..."
+                    type="text" 
+                    placeholder="Add task..." 
                     value={value}
                     onChange={(e) => setValue(e.target.value)}
                 />

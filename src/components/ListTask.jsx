@@ -1,6 +1,6 @@
 import React from 'react'
 import AddTask from './AddTask'
-import Task from '.Task'
+import Task from './Task'
 import { useSelector } from 'react-redux'
 
 const ListTask = () => {
@@ -13,7 +13,7 @@ const ListTask = () => {
 
             <div className="task--list">
                 {tasks.map(task => 
-                    <Task description={task.description} id={task.id} isDone={isDone}  />)}
+                    <Task description={task.description} id={task.id} isDone={task.isDone}  />)}
             </div>
         </>
     )

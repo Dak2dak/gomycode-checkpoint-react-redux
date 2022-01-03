@@ -7,4 +7,4 @@ export default configureStore({
             tasks: TaskReducer
         },
     }
-) 
+);
