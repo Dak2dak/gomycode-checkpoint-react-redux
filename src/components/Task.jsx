@@ -1,7 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
 import { toggleDone } from '../JS/TaskSlice';
-import { deleteTask } from '../JS/TaskSlice';
 
 const Task = ({id, description, isDone}) => {
 
@@ -11,8 +10,8 @@ const Task = ({id, description, isDone}) => {
         dispatch(toggleDone({id: id, isDone: !isDone}));
     }
 
-    const handleDelete = () => {
-        dispatch(deleteTask({id: id}));
+    const handleEdit = () => {
+        dispatch();
     }
 
     return (
@@ -29,14 +28,15 @@ const Task = ({id, description, isDone}) => {
                         <input 
                             type="text" 
                             value={description}  
+                            onChange={handleEdit}
                         />
                     </form>
                 </div>
                 <div className="task--editing">
-                    <i class="fas fa-pencil-alt"></i>
+                    <i className="fas fa-pencil-alt"></i>
                 </div>
                 <div className="task--deleting">
-                    <i className="fas fa-trash" onChange={handleDelete}></i>
+                    <i className="fas fa-trash"></i>
                 </div>
         </div>
     )

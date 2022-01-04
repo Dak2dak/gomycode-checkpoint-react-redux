@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import {addtask} from '../JS/TaskSlice';
 import { useState } from 'react';
 
+
 const AddTask = () => {
 
     const [value, setValue] = useState("");
@@ -16,6 +17,7 @@ const AddTask = () => {
                 description: value
             })
         );
+        setValue("");
     }
 
     return (
@@ -46,4 +48,4 @@ const AddTask = () => {
 
 export default AddTask;
 
-
+//The AddTask component is a success.

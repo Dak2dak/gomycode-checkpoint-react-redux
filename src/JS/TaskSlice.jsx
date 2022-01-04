@@ -25,12 +25,12 @@ const TaskSlice = createSlice({
             );
             state[index].isDone = action.payload.isDone;
         },
-        deleteTask: (state, action) => {
-            state.filter((task) => task.id !== action.payload.id)
+        editTask: (state, action) => {
+            
         }
     }
 });
 
-export const {addtask, toggleDone, deleteTask} = TaskSlice.actions;
+export const {addtask, toggleDone, doneFilter} = TaskSlice.actions;
 
 export default TaskSlice.reducer;
